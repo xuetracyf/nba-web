@@ -4,6 +4,10 @@ import nba from '../nba-client';
 
 import Profile from './Profile';
 
+import ShotChart from './ShotChart';
+
+import DataViewContainer from './DataViewContainer';
+
 class Main extends Component {
 
   state = {
@@ -23,12 +27,14 @@ class Main extends Component {
    }
 
    render() {
-       return (
-           <div className="main">
-               <Profile playerInfo={this.state.playerInfo} />
-           </div>
-       );
+      return (
+          <div className="main">
+              <Profile playerInfo={this.state.playerInfo} />
+          
+              <DataViewContainer playerId={this.state.playerId}/>
+          </div>
+      );
    }
-}
+ }
 
 export default Main;
